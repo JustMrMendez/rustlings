@@ -1,11 +1,12 @@
 // variables5.rs
 // Execute `rustlings hint variables5` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 fn main() {
     let number = "T-H-R-E-E"; // don't change this line
-    println!("Spell a Number : {number}", number = number);
-    number = "3"; // don't rename this variable
-    println!("{number} plus two is : {number}", number = number);
+    println!("Spell a Number : {number}");
+    let mut number = "3"; // don't rename this variable
+    println!(
+        "{number} plus two is : {number}",
+        number = number.parse::<i32>().unwrap() + 2
+    );
 }
